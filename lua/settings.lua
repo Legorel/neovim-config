@@ -7,7 +7,7 @@ o.termguicolors = true
 o.mouse = 'a'
 
 -- Set shell for :terminal
-o.shell = [["C:\Program Files\Git\bin\bash.exe"]]
+--o.shell = bash
 
 -- Chdir related settings
 --o.autochdir = true
