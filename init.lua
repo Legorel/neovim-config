@@ -7,7 +7,7 @@ end
 vim.cmd('language en_US.utf8')
 
 -- Set color scheme.
-vim.cmd('colorscheme tokyonight-night')
+require('colors')
 
 -- Disable Neovim's netrw.
 vim.g.loaded_netrw = 1
