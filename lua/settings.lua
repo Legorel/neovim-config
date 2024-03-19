@@ -1,4 +1,5 @@
 local o = vim.o
+local g = vim.g
 
 -- True colors
 o.termguicolors = true
@@ -56,3 +57,5 @@ o.smartcase = true
 
 o.pumheight = 10
 
+-- Set .h file to be C headers, not C++.
+g.c_syntax_for_h = 1
