@@ -27,6 +27,10 @@ map('i', '<C-Del>', '<C-O>dw')
 map('i', '<C-CR>', '<C-O>o')
 map('i', '<S-CR>', '<C-O>O')
 
+-- Delete previous/next line.
+map('i', '<C-Backspace>', '<Esc>jddki')
+map('i', '<S-Backspace>', '<Esc>kkddji')
+
 -- Exit terminal mode
 map('t', '<Esc>', '<C-\\><C-n>')
 
