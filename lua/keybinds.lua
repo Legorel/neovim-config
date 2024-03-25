@@ -6,13 +6,18 @@ vim.g.maplocalleader = ' '
 
 
 -- Helper function to avoid duplicate mappings
-function map(m, lhs, rhs)
+function map(m, lhs, rhs, user_opts)
+	opts = { silent = true }
+	for k,v in pairs(user_opts ~= nil and user_opts or {}) do
+		opts[k] = v
+	end
+
 	for _, m in ipairs(type(m) == 'table' and m or { m }) do
 		if vim.fn.maparg(lhs, m, false, false) ~= '' then
 			vim.keymap.del(m, lhs)
 		end
 	end
-	vim.keymap.set(m, lhs, rhs, { silent = true })
+	vim.keymap.set(m, lhs, rhs, opts)
 end
 
 
@@ -27,9 +32,19 @@ map('i', '<C-Del>', '<C-O>dw')
 map('i', '<C-CR>', '<C-O>o')
 map('i', '<S-CR>', '<C-O>O')
 
--- Delete previous/next line.
-map('i', '<C-Backspace>', '<Esc>jddki')
-map('i', '<S-Backspace>', '<Esc>kkddji')
+-- Delete previous/next line if it is blank.
+function getprev() return vim.fn.getline(vim.fn.line('.') - 1) end
+function getnext() return vim.fn.getline(vim.fn.line('.') + 1) end
+function is_blank(line) return string.find(line, '^%s*$') ~= nil end
+map('i', '<C-BS>', function() return is_blank(getnext()) and '<Esc>jddk' .. vim.fn.col('.') .. '|i' or '' end, { expr = true })
+map('i', '<S-BS>', function() return is_blank(getprev()) and '<Esc>kdd' .. vim.fn.col('.') .. '|i' or '' end, { expr = true })
+
+-- Indent/Deident current line
+map('i', '<C-I>', function() return '<Esc> >>' .. vim.o.shiftwidth .. 'li' end, { expr = true })
+map('i', '<S-I>', function()
+	indent = vim.fn.indent('.')
+	return indent > 0 and '<Esc> <<' .. math.min(vim.o.shiftwidth, indent) .. 'hi' or ''
+	end, { expr = true })
 
 -- Exit terminal mode
 map('t', '<Esc>', '<C-\\><C-n>')
