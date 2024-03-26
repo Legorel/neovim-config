@@ -36,12 +36,12 @@ map('i', '<S-CR>', '<C-O>O')
 function getprev() return vim.fn.getline(vim.fn.line('.') - 1) end
 function getnext() return vim.fn.getline(vim.fn.line('.') + 1) end
 function is_blank(line) return string.find(line, '^%s*$') ~= nil end
-map('i', '<C-BS>', function() return is_blank(getnext()) and '<Esc>jddk' .. vim.fn.col('.') .. '|i' or '' end, { expr = true })
-map('i', '<S-BS>', function() return is_blank(getprev()) and '<Esc>kdd' .. vim.fn.col('.') .. '|i' or '' end, { expr = true })
+map('i', '<C-BS>', function() return is_blank(getnext()) and '<Esc>jddk0' .. vim.fn.col('.') - 1 .. 'li' or '' end, { expr = true })
+map('i', '<C-S-BS>', function() return is_blank(getprev()) and '<Esc>kdd0' .. vim.fn.col('.') - 1 .. 'li' or '' end, { expr = true })
 
 -- Indent/Deident current line
 map('i', '<C-I>', function() return '<Esc> >>' .. vim.o.shiftwidth .. 'li' end, { expr = true })
-map('i', '<S-I>', function()
+map('i', '<C-S-I>', function()
 	indent = vim.fn.indent('.')
 	return indent > 0 and '<Esc> <<' .. math.min(vim.o.shiftwidth, indent) .. 'hi' or ''
 	end, { expr = true })
