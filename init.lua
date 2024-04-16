@@ -13,6 +13,11 @@ require('colors')
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Disable ftplugin indent.
+vim.cmd.filetype('indent off')
+
+-- Disable Ocaml mappings.
+vim.g.no_ocaml_maps = 1
 
 -- Enable the new lua module loader.
 vim.loader.enable()
