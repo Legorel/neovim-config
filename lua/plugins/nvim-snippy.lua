@@ -1,6 +1,6 @@
-local mappings = require('snippy.mapping')
+--local mappings = require('snippy.mapping')
 
-local map = require('keybinds').map
+--local map = require('keybinds').map
 
 --map('i', '<C-Tab>', mappings.expand_or_advance('<Tab>'))
 --map('s', '<Tab>', mappings.next('<Tab>'))
