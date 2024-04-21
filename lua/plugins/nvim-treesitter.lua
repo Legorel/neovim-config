@@ -17,3 +17,6 @@ require('nvim-treesitter.configs').setup {
 		},
 	},
 }
+
+-- Switch header/souce bind.
+require('keybinds').map('n', '<Leader>s', '<Cmd>ClangdSwitchSourceHeader<CR>')
