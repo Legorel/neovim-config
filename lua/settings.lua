@@ -1,5 +1,4 @@
 local o = vim.o
-local g = vim.g
 
 -- True colors
 o.termguicolors = true
@@ -8,7 +7,10 @@ o.termguicolors = true
 o.mouse = 'a'
 
 -- Set shell for :terminal
---o.shell = bash
+if require('os').is_windows then
+	o.shell = [["C:\Program Files\Git\bin\bash.exe"]]
+	o.shellslash = true
+end
 
 -- Chdir related settings
 --o.autochdir = true
@@ -44,7 +46,7 @@ o.ignorecase = true
 o.smartcase = true
 o.tagcase = 'followic'
 
--- Indentation using tabs.
+-- Indentation using tabs
 o.expandtab = false
 o.tabstop = 4
 o.shiftwidth = 4
@@ -57,5 +59,3 @@ o.smartcase = true
 
 o.pumheight = 10
 
--- Set .h file to be C headers, not C++.
-g.c_syntax_for_h = 1

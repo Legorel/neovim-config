@@ -8,6 +8,13 @@ end
 local cmp = require('cmp')
 local snippy = require('snippy')
 cmp.setup {
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp' },
+		{ name = 'snippy' },
+		{ name = 'nvim_lua' },
+	}, {
+		{ name = 'buffer' },
+	}),
 	snippet = {
 		expand = function(args)
 			require('snippy').expand_snippet(args.body)
@@ -47,12 +54,6 @@ cmp.setup {
 			end
 		end, { 'i' }),
 	}),
-	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		{ name = 'snippy' },
-	}, {
-		{ name = 'buffer' },
-	})
 }
 
 cmp.setup.cmdline({ '/', '?' }, {
@@ -70,3 +71,9 @@ cmp.setup.cmdline(':', {
 		{ name = 'cmdline' },
 	})
 })
+
+
+servers = require('plugins.lspconfig').servers
+for _, server in ipairs(servers) do
+	require('lspconfig')[server].capabilities = require('cmp_nvim_lsp').default_capabilities()
+end

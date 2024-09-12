@@ -1,7 +1,9 @@
+-- Mappings disabled because we have nvim-cmp
+
 --local mappings = require('snippy.mapping')
-
+--
 --local map = require('keybinds').map
-
+--
 --map('i', '<C-Tab>', mappings.expand_or_advance('<Tab>'))
 --map('s', '<Tab>', mappings.next('<Tab>'))
 --map({ 'i', 's' }, '<S-Tab>', mappings.previous('<S-Tab>'))

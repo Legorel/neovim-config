@@ -1,5 +1,3 @@
-vim.cmd.packadd('fzf')
-
 local fzf = require('fzf-lua')
 fzf.setup {}
 
@@ -20,12 +18,21 @@ map('n', '<Leader>fgi', fzf.live_grep_native)
 -- LSP
 map('n', '<Leader>flr', fzf.lsp_references)
 map('n', '<Leader>fld', fzf.lsp_definitions)
+map('n', '<Leader>flD', fzf.lsp_declarations)
 map('n', '<Leader>fli', fzf.lsp_implementations)
 map('n', '<Leader>flt', fzf.lsp_typedefs)
+map('n', '<Leader>flf', fzf.lsp_finder)
+map('n', '<Leader>flw', fzf.lsp_document_diagnostics)
+
+-- DAP
+map('n', '<Leader>fdC', fzf.dap_commands)
+map('n', '<Leader>fdc', fzf.dap_configurations)
+map('n', '<Leader>fdb', fzf.dap_breakpoints)
+map('n', '<Leader>fdv', fzf.dap_variables)
+map('n', '<Leader>fdf', fzf.dap_frames)
 
 -- Misc
 map('n', '<Leader>fh', fzf.help_tags)
-map('n', '<Leader>ft', fzf.colorschemes)
+map('n', '<Leader>fct', fzf.colorschemes)
 map('n', '<Leader>fcc', fzf.commands)
 map('n', '<Leader>fch', fzf.command_history)
-

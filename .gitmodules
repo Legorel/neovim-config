@@ -1,54 +1,75 @@
+[submodule "tokyonight.nvim"]
+	path = tokyonight.nvim
+	url = ./pack/themes/start/tokyonight.nvim
+[submodule "nvim-web-devicons"]
+	path = nvim-web-devicons
+	url = ./pack/plugins/start/nvim-web-devicons
+[submodule "lualine.nvim"]
+	path = lualine.nvim
+	url = ./pack/plugins/start/lualine.nvim
+[submodule "oil.nvim"]
+	path = oil.nvim
+	url = ./pack/plugins/start/oil.nvim
+[submodule "pack/themes/start/tokyonight.nvim"]
+	path = pack/themes/start/tokyonight.nvim
+	url = https://github.com/folke/tokyonight.nvim.git
 [submodule "pack/plugins/start/nvim-web-devicons"]
 	path = pack/plugins/start/nvim-web-devicons
 	url = https://github.com/nvim-tree/nvim-web-devicons.git
 [submodule "pack/plugins/start/lualine.nvim"]
 	path = pack/plugins/start/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim.git
-[submodule "pack/plugins/start/vim-repeat"]
-	path = pack/plugins/start/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
+[submodule "pack/plugins/start/oil.nvim"]
+	path = pack/plugins/start/oil.nvim
+	url = https://github.com/stevearc/oil.nvim.git
+[submodule "pack/plugins/start/carbon.nvim"]
+	path = pack/plugins/start/carbon.nvim
+	url = https://github.com/SidOfc/carbon.nvim
 [submodule "pack/plugins/start/leap.nvim"]
 	path = pack/plugins/start/leap.nvim
 	url = https://github.com/ggandor/leap.nvim.git
-[submodule "pack/plugins/start/nvim-tree.lua"]
-	path = pack/plugins/start/nvim-tree.lua
-	url = https://github.com/nvim-tree/nvim-tree.lua.git
-[submodule "pack/plugins/opt/fzf"]
-	path = pack/plugins/opt/fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule "pack/plugins/start/fzf-lua"]
-	path = pack/plugins/start/fzf-lua
-	url = https://github.com/ibhagwan/fzf-lua.git
-[submodule "pack/plugins/start/nvim-snippy"]
-	path = pack/plugins/start/nvim-snippy
-	url = https://github.com/dcampos/nvim-snippy.git
-[submodule "pack/plugins/start/friendly-snippets"]
-	path = pack/plugins/start/friendly-snippets
-	url = https://github.com/rafamadriz/friendly-snippets.git
+[submodule "pack/plugins/start/nvim-dap"]
+	path = pack/plugins/start/nvim-dap
+	url = https://github.com/mfussenegger/nvim-dap.git
+[submodule "pack/plugins/start/nvim-nio"]
+	path = pack/plugins/start/nvim-nio
+	url = https://github.com/nvim-neotest/nvim-nio
+[submodule "pack/plugins/start/nvim-dap-ui"]
+	path = pack/plugins/start/nvim-dap-ui
+	url = https://github.com/rcarriga/nvim-dap-ui.git
+[submodule "pack/plugins/start/nvim-dap-virtual-text"]
+	path = pack/plugins/start/nvim-dap-virtual-text
+	url = https://github.com/theHamsta/nvim-dap-virtual-text.git
 [submodule "pack/plugins/start/nvim-treesitter"]
 	path = pack/plugins/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
 [submodule "pack/plugins/start/nvim-lspconfig"]
 	path = pack/plugins/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
-[submodule "pack/plugins/start/cmp-snippy"]
-	path = pack/plugins/start/cmp-snippy
-	url = https://github.com/dcampos/cmp-snippy.git
-[submodule "pack/plugins/start/cmp-nvim-lsp"]
-	path = pack/plugins/start/cmp-nvim-lsp
-	url = https://github.com/hrsh7th/cmp-nvim-lsp.git
-[submodule "pack/plugins/start/cmp-path"]
-	path = pack/plugins/start/cmp-path
-	url = https://github.com/hrsh7th/cmp-path.git
-[submodule "pack/plugins/start/cmp-buffer"]
-	path = pack/plugins/start/cmp-buffer
-	url = https://github.com/hrsh7th/cmp-buffer.git
+[submodule "pack/plugins/start/cland_extensions.nvim"]
+	path = pack/plugins/start/cland_extensions.nvim
+	url = https://git.sr.ht/~p00f/clangd_extensions.nvim
+[submodule "pack/plugins/start/nvim-snippy"]
+	path = pack/plugins/start/nvim-snippy
+	url = https://github.com/dcampos/nvim-snippy
 [submodule "pack/plugins/start/nvim-cmp"]
 	path = pack/plugins/start/nvim-cmp
 	url = https://github.com/hrsh7th/nvim-cmp.git
+[submodule "pack/plugins/start/cmp-buffer"]
+	path = pack/plugins/start/cmp-buffer
+	url = https://github.com/hrsh7th/cmp-buffer.git
 [submodule "pack/plugins/start/cmp-cmdline"]
 	path = pack/plugins/start/cmp-cmdline
 	url = https://github.com/hrsh7th/cmp-cmdline.git
-[submodule "pack/themes/start/tokyonight"]
-	path = pack/themes/start/tokyonight
-	url = https://github.com/folke/tokyonight.nvim.git
+[submodule "pack/plugins/start/cmp-nvim-lsp"]
+	path = pack/plugins/start/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp.git
+[submodule "pack/plugins/start/cmp-nvim-lua"]
+	path = pack/plugins/start/cmp-nvim-lua
+	url = https://github.com/hrsh7th/cmp-nvim-lua.git
+[submodule "pack/plugins/start/gitsigns.nvim"]
+	path = pack/plugins/start/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim.git
+[submodule "pack/plugins/start/fzf-lua"]
+	path = pack/plugins/start/fzf-lua
+	url = https://github.com/ibhagwan/fzf-lua.git

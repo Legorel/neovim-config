@@ -1,9 +1,11 @@
 require('plugins.lualine')
+require('plugins.oil') -- Testing if I can make it useful.
+require('plugins.carbon')
 require('plugins.leap')
-require('plugins.nvim-tree')
-require('plugins.fzf')
-require('plugins.nvim-snippy')
-require('plugins.nvim-treesitter')
-
-require('plugins.cmp')
+require('plugins.dap')
+require('plugins.treesitter')
 require('plugins.lspconfig')
+require('plugins.snippy')
+require('plugins.cmp')
+require('plugins.gitsigns')
+require('plugins.fzf')
