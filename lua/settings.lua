@@ -1,4 +1,5 @@
 local o = vim.o
+local g = vim.g
 
 -- True colors
 o.termguicolors = true
@@ -53,6 +54,9 @@ o.shiftwidth = 4
 o.smartindent = true
 o.autoindent = true
 o.breakindent = true
+
+-- C syntax for .h header.
+g.c_syntax_for_h = true
 
 o.ignorecase = true
 o.smartcase = true
