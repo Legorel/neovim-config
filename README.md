@@ -27,7 +27,7 @@ git submodule init
 Update submodule when you need to:
 
 ```bash
-git submodule update
+git submodule update --recursive --remote
 ```
 
 ### Using GNU Stow
