@@ -18,7 +18,7 @@ end
 o.cdhome = true
 
 -- Clipboard settings
---o.clipboard = unnamedplus
+o.clipboard = 'unnamedplus'
 
 -- Scroll related settings
 o.scrolloff = 8
