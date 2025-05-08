@@ -21,5 +21,12 @@ lspconfig.basedpyright.setup {
 	},
 }
 
+lspconfig.zls.setup {
+	cmd = { '/home/legorel/opt/zig-linux-x86_64-0.14.0/zls' },
+	settings = {
+		zls = { zig_exe_path = '/home/legorel/opt/zig-linux-x86_64-0.14.0/zig' }
+	},
+}
+
 -- Return the list of servers
 return {servers = { 'clangd', 'basedpyright' }}
