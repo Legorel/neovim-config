@@ -3,7 +3,7 @@ dap = require('dap')
 map = require('keybinds').map
 
 -- DAP Adapters.
-if require('os').is_windows then
+if require('os_util').is_windows then
 	lldb_dap_command = '' -- TODO: Add windows command.
 else
 	lldb_dap_command = '/usr/bin/lldb-dap'

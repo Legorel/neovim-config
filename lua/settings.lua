@@ -8,7 +8,7 @@ o.termguicolors = true
 o.mouse = 'a'
 
 -- Set shell for :terminal
-if require('os').is_windows then
+if require('os_util').is_windows then
 	o.shell = [["C:\Program Files\Git\bin\bash.exe"]]
 	o.shellslash = true
 end

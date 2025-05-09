@@ -60,9 +60,8 @@ map('n', '<Leader>c', function()
 
 		vimrc_name = a.nvim_exec2('echo $MYVIMRC', { output = true}).output
 		-- Use / for file path when on windows.
-		if require('os').is_windows then
+		if require('os_util').is_windows then
 			vimrc_name = vimrc_name:gsub('\\', '/')
-			print(vimrc_name)
 		end
 
 		-- If window is already opened for the config file, switch to it.
