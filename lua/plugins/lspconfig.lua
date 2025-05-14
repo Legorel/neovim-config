@@ -34,5 +34,9 @@ if not is_windows then
 	}
 end
 
+map = require('keybinds').map
+
+map({'n', 'i'}, '<C-Space>', vim.diagnostic.open_float)
+
 -- Return the list of servers
 return {servers = servers}
