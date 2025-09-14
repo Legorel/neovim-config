@@ -27,5 +27,4 @@ vim.g.loaded_ruby_provider = 0
 -- Load the full config.
 require('settings')
 require('keybinds')
-require('autocmds')
 require('plugins')
