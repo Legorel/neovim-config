@@ -1,12 +1,21 @@
 local lspconfig = require('lspconfig')
 
 -- Servers with default settings.
-local servers = { 'clangd' }
+local servers = { }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup {}
 end
 
+
 -- Servers with custom settings.
+table.insert(servers, 'clangd')
+lspconfig.clangd.setup {
+	cmd = {
+		"clangd",
+		"--header-insertion=never"
+	}
+}
+
 table.insert(servers, 'basedpyright')
 lspconfig.basedpyright.setup {
 	settings = {
