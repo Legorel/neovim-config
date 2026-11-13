@@ -1,5 +1,7 @@
 # Legorel's Neovim config
 
+Changes
+
 (Almost) entirely written in lua. Uses git submodules and Neovim's builtin package system (see [Neovim Packages](https://neovim.io/doc/user/repeat.html#packages)).
 
 ## Prerequisite
